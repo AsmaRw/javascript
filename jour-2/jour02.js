@@ -69,11 +69,13 @@ else{
 var random = Math.random();
 var min = 1;
 var max = 6;
-Math.floor(Math.random() * (max - min + 1)+ min);
+Math.floor(random * (max - min + 1)+ min);
 
-if (Math.random = 6){
+if (random === max){
     console.log("Yes I win !")
 }
 else {
     console.log("So close !")
 }
+
+
