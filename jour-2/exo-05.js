@@ -1,0 +1,10 @@
+var test = 143;
+var bis = 319;
+console.log(test > bis);
+console.log(test < bis);
+console.log(test >= bis);
+console.log(test <= bis);
+console.log(test == bis);
+console.log(test === bis);
+console.log(test != bis);
+console.log(test !== bis);
