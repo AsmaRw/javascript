@@ -4,10 +4,20 @@
 // - Si `num` est plus petit que 6 et plus grand que 15, la fonction retourne "error"
 
 function generatePassword(num){
+    var password = ""
     if ( num < 6 || num > 15){
-        console.log
+        console.log("ok")
     }
-    for (i = 0 ; i <= num; i++)
+    else {
+        for(i=1; i<=num; i++)
+        var roundedNumber = Math.floor(Math.random() * (90+ 65 + 1) + 65);
+        var roundedLetter = String.fromCharCode(roundedNumber);
+        password = roundedLetter + password;
+        console.log("error");
+    }
 
+    console.log(password)
+
+    generatePassword(15)
 
 }
