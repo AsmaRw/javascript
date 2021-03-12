@@ -4,7 +4,10 @@
 // - Si `num` est plus petit que 6 et plus grand que 15, la fonction retourne "error"
 
 function generatePassword(num){
-    num = ["A", "B", "C", "D", "E", "F", "G","H", "I", "J", "K", "L", "M", "N", "O", "P","Q", "R", "S", "T","U", "V", "W", "X","Y", "Z"]
-    random = Math.ceil(Math.floor() * 26);
+    if ( num < 6 || num > 15){
+        console.log
+    }
+    for (i = 0 ; i <= num; i++)
+
 
 }
