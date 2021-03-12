@@ -1,10 +1,4 @@
-// ## 02 - Combine
 
-// - Créez une variable `cat2` qui reprend la structure de cat : mettez d'autres valeurs pour chaque clé
-
-// - Créez une variable `cats` qui contient un tableau contenant les variables `cat` et `cat2`
-// - Affichez la valeur de `age` de `cat` dans la console
-// - Affichez la valeur de `isCute` de `cat2` dans la console
 
 var cat2 = {
     name: "Sophie",
