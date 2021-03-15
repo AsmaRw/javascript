@@ -9,10 +9,26 @@
 //     tab.reverse();
 // }
 
-function checkPal(str){
-    console.log(str.length)
+function checkPal(word){
+    var sentenceReverse = word.split("").reverse().join('')
+    console.log(sentenceReverse)
 
-    for(var i = 0; i <= str.length - 1; i++){
+    if(word == sentenceReverse){
+        console.log("true")
+    }else {
+        console.log("false")
     }
 }
-checkPal("laptop")
+
+checkPal("racecar")
+
+// je veux un mot 
+// puis declarer le meme mot inverser 
+// puis les comparer 
+
+// je creer une fonction 
+// je recois un string comme parametre dans ma faction 
+// dans une nouvelle variable je transforme le string en array et je l'inverse avec reverse
+// je comparre cette nouvelle variable avec le string que j'avais au debut
+// j'affiche palindrome si ils sont egeaux et nope si ils ne sont pas 
+// appel la fonction
