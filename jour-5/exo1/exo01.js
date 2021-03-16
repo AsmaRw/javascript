@@ -11,10 +11,13 @@
 
 //     ⇒ Si vous ne donnez pas trois arguments, le programme doit afficher "error" dans la console
 
-function calculate(num1, num2, operators){
+function calculate(num1, operators, num2,){
     
     return eval = num1 + operators + num2
 }
-    console.log(parseInt(eval))
+    if(calculate(num1 + operators + num2)){
+        console.log(parseInt(eval))
+    }
+
 
     calculate()
