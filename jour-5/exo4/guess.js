@@ -16,36 +16,41 @@ var prompt = require("prompt")
 
 prompt.start()
 
-function play(){
-
-    prompt.get({name : "number", description : "Quel est le nombre mystère ?"}), function (err, res){
-
-        if(res.number !== mysteryNum){
-
-            return onErr(err)
-
-            // play();
-
-        } else if(res.number < mysteryNum){
-
-            console.log("C'est plus !")
-
-            play();
-
-        }else if(res.number > mysteryNum){
-
-            console.log("C'est moins !")
-
-            play();
-
-        }else if(res.number === mysteryNum){
-
-            console.log("Bravo !!")
-        }
-    }
+function onErr(err){
+    console.log(err)
+    return
 }
 
 
-play();
+function displayPrompt(){
+
+    prompt.get({name : "number", description : "Quel est le nombre mystère ?", validator: /^[0-9]+$/,
+    warning: "Choisissez un nombre entier s’il vous plaît"}, function play(err, res){
+
+        if(err || Number.isInteger(parseInt(res.number)) == false){
+
+            return onErr(err)
+
+        } else if(parseInt(res.number) < mysteryNum){
+
+            console.log("C'est plus !")
+
+            displayPrompt();
+
+        }else if(parseInt(res.number) > mysteryNum){
+
+            console.log("C'est moins !")
+
+            displayPrompt();
+
+        }else if(parseInt(res.number) === mysteryNum){
+
+            console.log("Bravo !!")
+        }
+    })
+}
+
+
+displayPrompt();
 
   
