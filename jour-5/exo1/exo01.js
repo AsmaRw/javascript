@@ -10,17 +10,42 @@
 // le programme alors attention aux paramètres !
 
 //     ⇒ Si vous ne donnez pas trois arguments, le programme doit afficher "error" dans la console
+function calculate(num1,num2, operators){
+    var firstInput = parseInt(num1)
+    var secondInput  = parseInt(num2)
+    // var thirdInput 
+    // console.log(firstInput, secondInput)
 
-function calculate(num1, operators, num2){
-    var firstInput = parseInt(num1, num2)
-    var secondInput = eval(num1 + operators + num2)
-    console.log(firstInput, secondInput)
-
-    if(operators == 'x'){
-        console.log(num1 + operators + num2) 
+    if(Number.isInteger(firstInput) == false || Number.isInteger(secondInput) == false ){
+        console.log("it's not a number")
+    }
+    else if(operators === '*'|| operators === 'x'){
+        console.log(firstInput * secondInput)
+    }else if(operators === '+'){
+        console.log(firstInput + secondInput)
+    } else if(operators === '-'){
+        console.log(firstInput - secondInput)
+    } else if(operators === '%'){
+        console.log(firstInput % secondInput)
+    }else if(operators === '/'){
+        console.log(firstInput / secondInput)
     }else{
-        return "error"
+        console.log("error")
     }
 }
 
-console.log(calculate('9','x', '4'))
+
+calculate(process.argv[2], process.argv[4], process.argv[3])
+
+
+
+
+
+
+
+
+
+
+
+
+
