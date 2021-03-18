@@ -4,23 +4,26 @@
 // - Comparez les valeurs des deux joueurs et Affichez le joueur gagnant (celui ayant le plus grand score)
 
 function launchDice(numberOfDice){
-    var joueur1
-    var joueur2
-    var min = 1;
-    var max = 6;
-    for( i= 0; i<= numberOfDice; i++){
-    var random = Math.random() * (max - min) + min
-    joueur1 = random + numberOfDice
-    joueur2 = random + numberOfDice
+    var total = 0
+    for(var i= 1; i<= numberOfDice; i++){
+    result = Math.floor(Math.random() *6) +1
+    console.log("valeur ajouter ="+ result)
+    total = total+ result
     }
-    if(joueur1 < joueur2){
-        console.log ("1 is better")
-    }
-    else if (joueur1 > joueur2){
-        console.log ("2 is better")
-    }
-    console.log(joueur1, joueur2)
+    return(total)
 }
 
-launchDice()
+console.log(launchDice(5))
+
+var player1 = launchDice(5)
+var player2 = launchDice(5)
+console.log(player1)
+console.log(player1)
+if (player1 < player2){
+    console.log("player2 win")
+} else if(player1 > player2){
+    console.log("player1 win")
+}else{
+    console.log("draw")
+}
 
