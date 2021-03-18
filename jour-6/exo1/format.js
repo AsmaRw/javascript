@@ -5,27 +5,26 @@
 // - Appelez la fonction et affichez son résultat dans la console
 
 
-function formatDate(stringDate){
-// var stringDate = "2021-03-18"
+function formatDate(stringDate) {
 
-var date = new Date (stringDate)
+    var date = new Date(stringDate);
 
-console.log(date)
+    var year = date.getFullYear();
 
-var year = date.getFullYear()
+    var month = date.getMonth() + 1;
 
-// console.log(year)
+    if (month < 10) {
+        month = "0" + month;
+    }
 
-var month = '0' + (date.getMonth() +1)
+    var day = date.getDate();
 
-// console.log(month)
+    if (day < 10) {
+        day = "0" + day;
+    }
 
-var day = date.getDate()
-
-// console.log(day)
-
-console.log(day + '/' + month + '/' + year)
+    console.log(day + '/' + month + '/' + year);
 
 }
 
-formatDate("2021/03/18")
+formatDate("2021/01/22");
