@@ -6,5 +6,5 @@ fs.readFile("jour07.txt", function (err, data) {
        return;
     }
  
-    console.log("Lecture en différé : " + data.toString());
+    console.log("jour07.txt " + data.toString());
  });
