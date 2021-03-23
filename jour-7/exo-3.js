@@ -10,8 +10,10 @@ var longName =
         }
     ]
 
-var shortName = longName.map(function (Element) {
-    return "name :" + " " + Element.firstName + " " + Element.lastName;
+var shortName = longName.map(function (elem) {
+    return {
+        name : elem.firstName + " " + elem.lastName
+    }
 }
 )
 
