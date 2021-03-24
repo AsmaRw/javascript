@@ -18,17 +18,13 @@ function getCountries(){
         var results = JSON.parse(body);
         //console.log(results)
 
-         results.map(function(elem){
-            elem.name + elem.capital
+         countriesNames = results.map(function(elem){
+            return elem.name + elem.name
          })
-         console.log(results)
          
-         results.fil
+         console.log(countriesNames.join(" - "))
     })
 
-    
 }
 
-getCountries(countriesNames)
-
-
+getCountries()
