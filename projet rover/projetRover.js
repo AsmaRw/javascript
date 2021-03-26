@@ -114,20 +114,15 @@ function pilotRover(lrf) {
 
             turnLeft(rover)
         }
-    }
-    for (var i = 0; i <= lrf.length; i++) {
 
-        if (lrf.charAt(i) === 'r') {
+        else if (lrf.charAt(i) === 'r') {
 
             rover.travelLog.push(rover.x, rover.y)
 
             turnRight(rover)
 
         }
-    }
-
-    for (var i = 0; i <= lrf.length; i++) {
-        if (lrf.charAt(i) === 'f') {
+        else if (lrf.charAt(i) === 'f') {
 
             rover.travelLog.push(rover.x, rover.y)
 
@@ -136,4 +131,6 @@ function pilotRover(lrf) {
     }
 }
 
+
 pilotRover('lrfllr')
+console.log(rover)
