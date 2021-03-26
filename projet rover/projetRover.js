@@ -15,55 +15,64 @@ var grid = [
     [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 ];
 
- console.log(grid)
+//console.log(grid)
 // console.log(gird.length)
 
 
 var rover = {
     direction: 'N',
     x: 0,
-    y: 0
+    y: 0,
+    travelLog: []
 }
-
-console.log(rover)
 
 
 function turnRight(rover) {
 
-    if ("N") {
-        return "E";
+    if (rover.direction === 'N') {
+        rover.direction = 'E'
+        console.log(rover.direction)
     }
-    else if ("E") {
-        return  "S";
+    else if (rover.direction === 'E') {
+        rover.direction = 'S'
+        console.log(rover.direction)
     }
-    else if ("S") {
-        return "W";
-    } else {
-        return "N"
+    else if (rover.direction === 'S') {
+        rover.direction = 'W'
+        console.log(rover.direction)
+    } else if (rover.direction === 'W') {
+        rover.direction = 'N'
+        console.log(rover.direction)
     }
-    
+
 }
 
-turnRight(rover)
-console.log(rover)
+//turnRight(rover)
+
 
 function turnLeft(rover) {
-    if ("N") {
-        return "W";
+
+
+    if (rover.direction === 'N') {
+        rover.direction = 'W'
+        console.log(rover.direction)
     }
-    else if ("W") {
-        return "S";
+    else if (rover.direction === 'W') {
+        rover.direction = 'S'
+        console.log(rover.direction)
     }
-    else if ("S") {
-        return "E";
-    } else {
-        return 'N'
+    else if (rover.direction === 'S') {
+        rover.direction = 'E'
+        console.log(rover.direction)
+    } else if (rover.direction === 'E') {
+        rover.direction = 'N'
+        console.log(rover.direction)
     }
 }
 
 
-turnLeft(rover)
-console.log(rover)
+//turnLeft(rover)
+
 
 
 
@@ -75,18 +84,56 @@ console.log(rover)
 function moveForward(rover) {
 
     if (rover.direction === "E") {
-        rover.x = rover.x + 1;
+        rover.x = rover.x + 1
     }
     else if (rover.direction === "W") {
-        rover.x = rover.x - 1;
+        rover.x = rover.x - 1
     }
     else if (rover.direction === "N") {
-        rover.y = rover.y - 1;
+        rover.y = rover.y - 1
     }
     else if (rover.direction === "S") {
-        rover.y = rover.y + 1;
+        rover.y = rover.y + 1
     }
-    grid[1][1];
+    //grid[6][5];
 
 }
-moveForward(rover);
+//moveForward(rover);
+
+
+
+
+
+function pilotRover(lrf) {
+
+    for (var i = 0; i <= lrf.length; i++) {
+
+        if (lrf.charAt(i) === 'l') {
+
+            rover.travelLog.push(rover.x, rover.y)
+
+            turnLeft(rover)
+        }
+    }
+    for (var i = 0; i <= lrf.length; i++) {
+
+        if (lrf.charAt(i) === 'r') {
+
+            rover.travelLog.push(rover.x, rover.y)
+
+            turnRight(rover)
+
+        }
+    }
+
+    for (var i = 0; i <= lrf.length; i++) {
+        if (lrf.charAt(i) === 'f') {
+
+            rover.travelLog.push(rover.x, rover.y)
+
+            moveForward(rover)
+        }
+    }
+}
+
+pilotRover('lrfllr')
