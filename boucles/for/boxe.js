@@ -3,6 +3,14 @@
 A l'aide d'un papier et crayon, devinez ce qu'affiche le code suivant (interdit d'executer le code !)*/
 
 
+// i < 14 ? oui
+// j'affiche 10
+// i < 14 ? oui
+// j'affiche 34
+// i < 14 ? Non => fin de la boucle
+// j'affiche 17
+// j'affiche 30
+// j'affiche 14
 
 var box1 = 12;
 
